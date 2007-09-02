@@ -5,16 +5,15 @@
 
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 Summary:	HTML_Select is a class for generating HTML form select elements
 License:	PHP License
 Group:		Development/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
-URL:		http://pear.php.net/package/HTML_Select_Common/
+URL:		http://pear.php.net/package/HTML_Select
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
-Obsoletes:	php-pear-HTML_Select
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -61,5 +60,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/packages/%{_pearname}.xml
-
-
