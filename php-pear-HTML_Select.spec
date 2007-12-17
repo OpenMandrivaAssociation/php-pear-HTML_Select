@@ -15,7 +15,6 @@ Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 HTML_Select provides an OOP way of generating HTML form select elements.
