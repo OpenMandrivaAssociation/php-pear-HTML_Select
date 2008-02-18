@@ -6,7 +6,7 @@
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	%mkrel 4
-Summary:	HTML_Select is a class for generating HTML form select elements
+Summary:	Class for generating HTML form select elements
 License:	PHP License
 Group:		Development/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
