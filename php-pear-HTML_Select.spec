@@ -5,7 +5,7 @@
 
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
-Release:	%mkrel 8
+Release:	%mkrel 9
 Summary:	Class for generating HTML form select elements
 License:	PHP License
 Group:		Development/PHP
@@ -15,7 +15,7 @@ Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 HTML_Select provides an OOP way of generating HTML form select elements.
@@ -27,11 +27,12 @@ In PEAR status of this package is: %{_status}.
 
 %install
 rm -rf %{buildroot}
-install -d %{buildroot}%{_datadir}/pear/%{_class}
+install -d -m 755 %{buildroot}%{_datadir}/pear/%{_class}
 
-install %{_pearname}-%{version}/Select.php %{buildroot}%{_datadir}/pear/%{_class}
+install -m 644 %{_pearname}-%{version}/Select.php \
+    %{buildroot}%{_datadir}/pear/%{_class}
 
-install -d %{buildroot}%{_datadir}/pear/packages
+install -d -m 755 %{buildroot}%{_datadir}/pear/packages
 install -m 644 package.xml %{buildroot}%{_datadir}/pear/packages/%{_pearname}.xml
 
 %post
