@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	Class for generating HTML form select elements
 License:	PHP License
 Group:		Development/PHP
